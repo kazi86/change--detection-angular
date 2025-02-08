@@ -1,0 +1,20 @@
+<div class="row" [formGroup]="emailForm">
+  <label for="emailInput">Enter email</label>
+  <div class="email-container col-3 border border-primary">
+    <div class="email-item" *ngFor="let email of emails; let i = index">
+      <span [ngClass]="{'invalid': !isValidEmail(email)}">{{ email }}</span>
+      <button type="button" (click)="removeEmail(i)">x</button>
+    </div>
+    <input
+      id="emailInput"
+      class="col-12 m-0 no-borders"
+      type="text"
+      placeholder="Enter email"
+      formControlName="emailInput"
+      (keyup.enter)="addEmail()"
+    />
+  </div>
+  <div *ngIf="emailForm.get('emailInput')?.invalid && emailForm.get('emailInput')?.touched" class="error">
+    Invalid email format
+  </div>
+</div>

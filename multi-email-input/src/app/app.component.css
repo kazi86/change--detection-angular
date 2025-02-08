@@ -1,0 +1,50 @@
+.email-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .email-item {
+    background-color: #e0e0e0;
+    color: #333;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .email-item .invalid {
+    color: red;
+  }
+  
+  .email-item button {
+    background: transparent;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .no-borders{
+    border: 0px !important;
+  }
+
+
+  input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: initial !important;
+}
